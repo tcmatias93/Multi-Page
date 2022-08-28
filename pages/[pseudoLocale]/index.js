@@ -52,10 +52,10 @@ export default function Home({ pseudoLocale }) {
         </h1>
         {siteAndLocale && (
           <ul>
-            {siteAndLocale.link.map((link) => (
-              <li key={link}>
+            {siteAndLocale.links.map(({name, link}) => (
+              <li key={name}>
                 <Link href={link}>
-                  <a>{link}</a>
+                  <a>{name}</a>
                 </Link>
               </li>
             ))}
