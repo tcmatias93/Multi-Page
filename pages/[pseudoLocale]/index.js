@@ -50,17 +50,15 @@ export default function Home({ pseudoLocale }) {
             ? siteAndLocale.title
             : `el sitio ${locale} no funciona`}{" "}
         </h1>
-        {siteAndLocale && (
-          <ul>
-            {siteAndLocale.links.map(({name, link}) => (
-              <li key={name}>
+        <ul>
+            {siteAndLocale.link.map((link) => (
+              <li key={link}>
                 <Link href={link}>
-                  <a>{name}</a>
+                  <a>{link}</a>
                 </Link>
               </li>
             ))}
           </ul>
-        )}
 
         <div>
           <a href={`http://localhost${nextSiteNr}:3000/site${nextSiteNr}/${pseudoLocale}`}>

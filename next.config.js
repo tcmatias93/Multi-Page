@@ -47,20 +47,19 @@ const nextConfig = {
       }
     ))
   },
-
-  redirects: () => (
+/*   redirects: () => (
     [
       {
         source: '/',
         destination: `/${pseudoLocales[0]}`,
-        permanent: true,
+        permanent: true
       }
     ]
   ),
 
   future: {
-    webpack5: true,
-  }
+    webpack5: true
+  } */
 
 };
 
