@@ -15,6 +15,9 @@ a {
   box-sizing: border-box;
 }
 
+.site1 {background-color: aqua;}
+.site2 {background-color: pink}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import getConfig from "next/config";
+import styles from '../../styles/Home.module.css'
 
 export async function getStaticPaths({ locales }) {
   return {
@@ -40,12 +41,13 @@ export default function Home({ pseudoLocale }) {
 
   return (
     <>
+    <div className={[styles.main, locale].join(' ') }>
       <Head>
         <title>Multi dominio Prueba</title>
       </Head>
 
       <main>
-        <h1>
+        <h1 className={styles.title}>
           {siteAndLocale
             ? siteAndLocale.title
             : `el sitio ${locale} no funciona`}{" "}
@@ -69,6 +71,7 @@ export default function Home({ pseudoLocale }) {
           </a>
         </div>
       </main>
+      </div>
     </>
   );
 }
